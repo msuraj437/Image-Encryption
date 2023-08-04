@@ -2,7 +2,7 @@ import keygenerator as kg
 import numpy as np
 import cv2
 
-img = cv2.imread("C://Users/adroi/PycharmProjects/python_project/Chaos/Images/icecream.jpeg")
+img = cv2.imread("Path Of the Image")
 
 # gr_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 cv2.imshow('Normal Image', img)
@@ -20,7 +20,7 @@ for i in range(height):
         z += 1
 cv2.imshow('Encrypted', en_img)
 cv2.waitKey(0)
-cv2.imwrite("C://Users/adroi/PycharmProjects/python_project/Chaos/Images/Encrypted_image.jpeg", en_img)
+cv2.imwrite("Path to save the Encrypted Image", en_img)
 
 z = 0
 dec_img = np.zeros(shape=[height, width, 3], dtype=np.uint8)
@@ -30,4 +30,4 @@ for i in range(height):
         z += 1
 cv2.imshow('Decrypted', dec_img)
 cv2.waitKey(0)
-cv2.imwrite("C://Users/adroi/PycharmProjects/python_project/Chaos/Images/Decrypted_image.jpeg", dec_img)
+cv2.imwrite("Path to save the Decrypted Image", dec_img)
